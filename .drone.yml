@@ -12,8 +12,8 @@ steps:
   image: plugins/docker
   settings:
     repo: naikyding/drone-ci
-    username: naikyding
-    password: 494925af-c112-41f3-8bdc-64bd9982d54a
+    username: docker_username
+    password: docker_password
     tags: latest
     when:
       branch:
