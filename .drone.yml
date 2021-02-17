@@ -2,15 +2,8 @@ kind: pipeline
 name: Drone ci
 
 steps:
-- name: install && test
+- name: RUN TEST
   image: node
   commands:
   - npm install
   - npm run test:unit  
-  - npm run build
-  - npm run build
-
-- name: build
-  image: node
-  commands:
-  - npm run build
