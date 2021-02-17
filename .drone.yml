@@ -2,8 +2,17 @@ kind: pipeline
 name: Drone ci
 
 steps:
-- name: RUN TEST
+- name: unit test
   image: node
   commands:
   - npm install
   - npm run test:unit  
+
+- name: docker  
+  image: plugins/docker
+  settings:
+    repo: naikyding/drone-ci
+    target: production
+    username: naikyding
+    password: 494925af-c112-41f3-8bdc-64bd9982d54a
+    tags: latest
