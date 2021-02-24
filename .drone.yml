@@ -9,7 +9,7 @@ steps:
   - npm run test:unit  
   when:
     branch:
-    - feature/*
+    - develop
     event:
       - pull_request
 
@@ -31,4 +31,4 @@ steps:
 trigger:
   branch:
   - master
-  - feature/*
+  - develop
