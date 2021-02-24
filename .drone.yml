@@ -9,11 +9,9 @@ steps:
   - npm run test:unit  
   when:
     branch:
-    - develop
+    - feature/*
     event:
-      include:
       - pull_request
-      - push
 
 - name: docker  
   image: plugins/docker
@@ -27,4 +25,10 @@ steps:
     when:
       branch:
       - master
-      - feature/*
+      event:
+      - push
+
+trigger:
+  branch:
+  - master
+  - feature/*
