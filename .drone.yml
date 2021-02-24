@@ -9,7 +9,7 @@ steps:
   - npm run test:unit  
   when:
     branch:
-    - feature/*
+    - develop
     event:
       - pull_request
 
@@ -22,13 +22,13 @@ steps:
     password: 
         from_secret: docker_password
     tags: latest
-    when:
-      branch:
-      - master
-      event:
+  when:
+    branch:
+    - master
+    event:
       - push
 
 trigger:
   branch:
   - master
-  - feature/*
+  - develop
